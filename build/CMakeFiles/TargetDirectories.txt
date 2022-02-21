@@ -1,0 +1,8 @@
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/install/strip.dir
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/install/local.dir
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/install.dir
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/list_install_components.dir
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/rebuild_cache.dir
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/UseAction-Boilerplate.dir
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/edit_cache.dir
+/home/gnt/Desktop/test/stepping/build/CMakeFiles/sim.dir

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
 
-project(Example_Shakiba)
+project(UserAction-Boilerplate)
 
 option(WITH_GEANT4_UIVIS "Build example with Geant4 UI and Vis drivers" ON)
 if(WITH_GEANT4_UIVIS)
@@ -24,6 +24,6 @@ file(GLOB MACRO_FILES
 file(COPY ${MACRO_FILES} DESTINATION ${PROJECT_BINARY_DIR})
 
 
-add_custom_target(Example_Shakiba DEPENDS sim)
+add_custom_target(UserAction-Boilerplate DEPENDS sim)
 
 install(TARGETS sim DESTINATION bin)

@@ -6,9 +6,12 @@
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 
-#include "construction.hh"
-#include "physics.hh"
-#include "action.hh"
+#include "Construction.hh"
+#include "G4VModularPhysicsList.hh"
+#include "G4StepLimiterPhysics.hh"
+#include "QGSP_BIC_HP.hh"
+// #include "Physics.hh"
+#include "Action.hh"
 
 int main(int argc, char **argv)
 {
@@ -17,7 +20,14 @@ int main(int argc, char **argv)
     G4RunManager *runManager = new G4RunManager();
 
     runManager->SetUserInitialization(new MyDetectorConstruction());
-    runManager->SetUserInitialization(new MyPhysicsList());
+
+    G4VModularPhysicsList* physicsList = new QGSP_BIC_HP;
+    physicsList->RegisterPhysics(new G4StepLimiterPhysics());
+    physicsList->SetDefaultCutValue(0.1*mm);  
+    runManager->SetUserInitialization(physicsList);
+
+
+    // runManager->SetUserInitialization(new MyPhysicsList());
     runManager->SetUserInitialization(new MyActionInitialization());
     runManager->Initialize();
 
